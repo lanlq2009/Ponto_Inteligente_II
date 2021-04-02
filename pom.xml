@@ -6,21 +6,25 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.4.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> 
 	</parent>
 	<groupId>br.com.pontointeligente</groupId>
 	<artifactId>Ponto_Inteligente_II</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Ponto_Inteligente_II</name>
 	<description>Demo project for Spring Boot</description>
+	
 	<properties>
 		<java.version>8</java.version>
 	</properties>
+	
 	<dependencies>
-		<dependency>
+	
+		<!-- dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+			<version>2.4.4</version>
+		</dependency-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -28,11 +32,32 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- JPA / MySQL / H2 -->
+		<dependency>
+		  <groupId>org.springframework.boot </groupId>
+		  <artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+	
+	   <dependency>
+		  <groupId>mysql </groupId>
+		  <artifactId>mysql-connector-java </artifactId>
+		</dependency>
+		
+		<dependency>
+		   <groupId> com.h2database </groupId>
+		   <artifactId>h2</artifactId>
+		   <scope>runtime</scope>
+		</dependency>	
+		<!--  FIM -->
+		
+		
 	</dependencies>
 
 	<build>
@@ -41,6 +66,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-resources-plugin</artifactId>
+			    <version>3.1.0</version>
+             </plugin> 
 		</plugins>
 	</build>
 
